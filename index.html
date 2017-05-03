@@ -35,9 +35,9 @@
     }
   </style>
   <script>
-    var email = "reception_machine@hewitt.ca";
-    var link = document.getElementById("email");
     function localize() {
+      var email = "reception_machine@hewitt.ca";
+      var link = document.getElementById("email");
       if (navigator.language.indexOf("en") >= 0) {
         document.title = "Reception";
         link.href = "mailto:HRI%20Pointe-Claire%20<" + email + ">?subject=Reception%20Hewitt%20Express";
