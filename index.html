@@ -35,16 +35,20 @@
     }
   </style>
   <script>
+    var email = "reception_machine@hewitt.ca";
+    var link = document.getElementById("email");
     function localize() {
       if (navigator.language.indexOf("en") >= 0) {
         document.title = "Reception";
-        var link = document.getElementById("email");
-        link.href = "mailto:HRI%20Pointe-Claire%20<hripointeclaire@hewitt.ca>?subject=Reception%20Hewitt%20Express";
+        link.href = "mailto:HRI%20Pointe-Claire%20<" + email + ">?subject=Reception%20Hewitt%20Express";
         link.innerHTML = "New reception email";
         document.getElementById("note").innerHTML = "Press the link above to open a new email for machine reception; insert a photo of the VIN then send.";
       }
       else {
         document.title = "Réception";
+        link.href = "mailto:LHI%20Pointe-Claire%20<" + email + ">?subject=R%C3%A9ception%20Hewitt%20Express";
+        link.innerHTML = "Nouveau courriel de r&#233;ception";
+        document.getElementById("note").innerHTML = "Appuyez sur le lien ci-haut pour ouvrir un nouveau courriel de r&#233;ception de machine; insérez une photo du VIN puis envoyez.";
       }
       document.getElementById("main").classList.remove("hidden");
     }
@@ -54,9 +58,9 @@
 
   <img src="https://www.hewittexpress.ca/images/logo.jpg"></img>
   
-  <p><a id="email" href="mailto:LHI%20Pointe-Claire%20<hripointeclaire@hewitt.ca>?subject=R%C3%A9ception%20Hewitt%20Express" target="_top">Nouveau courriel de r&#233;ception</a></p>
+  <p><a id="email" href="" target="_top"></a></p>
   
-  <p id="note">Appuyez sur le lien ci-haut pour ouvrir un nouveau courriel de r&#233;ception de machine; insérez une photo du VIN puis envoyez.</p>
+  <p id="note"></p>
 
 </body>
 </html>
